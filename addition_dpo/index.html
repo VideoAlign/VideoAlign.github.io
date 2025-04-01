@@ -3,7 +3,7 @@
     <html>
       <head>
         <meta charset="UTF-8">
-        <title>Multiple Folders Video Display</title>
+        <title>Dynamic DPO Results</title>
         
     <style>
       body {
@@ -65,21 +65,21 @@
       </head>
       <body>
         
-    <h1 class="main-title">More Results</h1>
+    <h1 class="main-title">Results of Dynamic DPO and Saturation DPO </h1>
     <p align="left" class="description">
         Note: You can toggle among the results of the three DPO models. Click the "▶️" button on the left side of each video to play it.
       </p>
     
         
     <div class="toggle-buttons">
-      <button class="switch-button active" data-target="contrast-dpo-table">Saturation DPO</button>
-      <button class="switch-button" data-target="speed-dpo-table">Dynamic DPO</button>
+      <button class="switch-button" data-target="contrast-dpo-table">Saturation DPO</button>
+      <button class="switch-button active" data-target="speed-dpo-table">Dynamic DPO</button>
       <button class="switch-button" data-target="contrast+speed-dpo-table">Saturation DPO + Dynamic DPO</button>
     </div>
     
         
     
-    <div id="contrast-dpo-table" class="table-container active">
+    <div id="contrast-dpo-table" class="table-container">
       <table align="center">
         <thead>
           <tr>
@@ -319,7 +319,7 @@
     </div>
     
     
-    <div id="speed-dpo-table" class="table-container">
+    <div id="speed-dpo-table" class="table-container active">
       <table align="center">
         <thead>
           <tr>
