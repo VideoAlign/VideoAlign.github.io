@@ -1,0 +1,719 @@
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Dynamic DPO Results</title>
+        
+    <style>
+      body {
+        text-align: center;
+        background-color: #000;
+        color: #fff;
+        font-family: Arial, sans-serif;
+      }
+      .main-title {
+        font-size: 36px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+      .description {
+        font-size: 20px;
+        width: 800px;
+        margin: auto;
+        margin-top: 30px;
+        margin-bottom: 100px;
+      }
+      .toggle-buttons {
+        margin: 20px 0;
+      }
+      .switch-button {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 5px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #000;
+        transition: background-color 0.3s;
+      }
+      .switch-button.active {
+        background-color: rgba(158, 247, 211, 1.0);
+        color: #000;
+      }
+      table {
+          width: 600px;
+          margin: auto;
+          border-collapse: collapse;
+      }
+      td, th {
+          border: none;
+          padding: 8px;
+          color: #fff;
+      }
+      .table-container {
+          display: none;
+          margin-bottom: 40px;
+      }
+      .table-container.active {
+          display: block;
+      }
+    </style>
+    
+      </head>
+      <body>
+        
+    <h1 class="main-title">Results of Dynamic DPO and Saturation DPO </h1>
+    <p align="left" class="description">
+        Note: You can toggle among the results of the three DPO models. Click the "▶️" button on the left side of each video to play it.
+      </p>
+    
+        
+    <div class="toggle-buttons">
+      <button class="switch-button" data-target="contrast-dpo-table">Saturation DPO</button>
+      <button class="switch-button active" data-target="speed-dpo-table">Dynamic DPO</button>
+      <button class="switch-button" data-target="contrast+speed-dpo-table">Saturation DPO + Dynamic DPO</button>
+    </div>
+    
+        
+    
+    <div id="contrast-dpo-table" class="table-container">
+      <table align="center">
+        <thead>
+          <tr>
+            <th style="text-align: center; font-size: 28px;"></th>
+            <th style="text-align: center; font-size: 28px;">Comparisons</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 01</div>
+                    <button class="play-button" data-video-id="video-contrast/01_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/01_seed666.mp4" height="300" src="contrast/01_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 02</div>
+                    <button class="play-button" data-video-id="video-contrast/02_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/02_seed666.mp4" height="300" src="contrast/02_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 03</div>
+                    <button class="play-button" data-video-id="video-contrast/03_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/03_seed666.mp4" height="300" src="contrast/03_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 04</div>
+                    <button class="play-button" data-video-id="video-contrast/04_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/04_seed666.mp4" height="300" src="contrast/04_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 05</div>
+                    <button class="play-button" data-video-id="video-contrast/05_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/05_seed666.mp4" height="300" src="contrast/05_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 06</div>
+                    <button class="play-button" data-video-id="video-contrast/06_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/06_seed666.mp4" height="300" src="contrast/06_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 07</div>
+                    <button class="play-button" data-video-id="video-contrast/07_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/07_seed666.mp4" height="300" src="contrast/07_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 08</div>
+                    <button class="play-button" data-video-id="video-contrast/08_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/08_seed666.mp4" height="300" src="contrast/08_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 09</div>
+                    <button class="play-button" data-video-id="video-contrast/09_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/09_seed666.mp4" height="300" src="contrast/09_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 10</div>
+                    <button class="play-button" data-video-id="video-contrast/10_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/10_seed666.mp4" height="300" src="contrast/10_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 11</div>
+                    <button class="play-button" data-video-id="video-contrast/11_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/11_seed666.mp4" height="300" src="contrast/11_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 12</div>
+                    <button class="play-button" data-video-id="video-contrast/12_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/12_seed666.mp4" height="300" src="contrast/12_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 13</div>
+                    <button class="play-button" data-video-id="video-contrast/13_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/13_seed666.mp4" height="300" src="contrast/13_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 14</div>
+                    <button class="play-button" data-video-id="video-contrast/14_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/14_seed666.mp4" height="300" src="contrast/14_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 15</div>
+                    <button class="play-button" data-video-id="video-contrast/15_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-contrast/15_seed666.mp4" height="300" src="contrast/15_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <div id="speed-dpo-table" class="table-container active">
+      <table align="center">
+        <thead>
+          <tr>
+            <th style="text-align: center; font-size: 28px;"></th>
+            <th style="text-align: center; font-size: 28px;">Comparisons</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 01</div>
+                    <button class="play-button" data-video-id="video-speed/01_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/01_seed666.mp4" height="300" src="speed/01_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 02</div>
+                    <button class="play-button" data-video-id="video-speed/02_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/02_seed666.mp4" height="300" src="speed/02_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 03</div>
+                    <button class="play-button" data-video-id="video-speed/03_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/03_seed666.mp4" height="300" src="speed/03_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 04</div>
+                    <button class="play-button" data-video-id="video-speed/04_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/04_seed666.mp4" height="300" src="speed/04_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 05</div>
+                    <button class="play-button" data-video-id="video-speed/05_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/05_seed666.mp4" height="300" src="speed/05_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 06</div>
+                    <button class="play-button" data-video-id="video-speed/06_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/06_seed666.mp4" height="300" src="speed/06_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 07</div>
+                    <button class="play-button" data-video-id="video-speed/07_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/07_seed666.mp4" height="300" src="speed/07_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 08</div>
+                    <button class="play-button" data-video-id="video-speed/08_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/08_seed666.mp4" height="300" src="speed/08_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 09</div>
+                    <button class="play-button" data-video-id="video-speed/09_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/09_seed666.mp4" height="300" src="speed/09_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 10</div>
+                    <button class="play-button" data-video-id="video-speed/10_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/10_seed666.mp4" height="300" src="speed/10_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 11</div>
+                    <button class="play-button" data-video-id="video-speed/11_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/11_seed666.mp4" height="300" src="speed/11_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 12</div>
+                    <button class="play-button" data-video-id="video-speed/12_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed/12_seed666.mp4" height="300" src="speed/12_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+    
+    
+    <div id="contrast+speed-dpo-table" class="table-container">
+      <table align="center">
+        <thead>
+          <tr>
+            <th style="text-align: center; font-size: 28px;"></th>
+            <th style="text-align: center; font-size: 28px;">Comparisons</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 01</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/02_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/02_seed666.mp4" height="300" src="speed+contrast/02_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 02</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/03_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/03_seed666.mp4" height="300" src="speed+contrast/03_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 03</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/04_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/04_seed666.mp4" height="300" src="speed+contrast/04_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 04</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/05_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/05_seed666.mp4" height="300" src="speed+contrast/05_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 05</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/06_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/06_seed666.mp4" height="300" src="speed+contrast/06_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 06</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/07_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/07_seed666.mp4" height="300" src="speed+contrast/07_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 07</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/08_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/08_seed666.mp4" height="300" src="speed+contrast/08_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 08</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/09_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/09_seed666.mp4" height="300" src="speed+contrast/09_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="text-align: center;">
+                    <div style="font-size: 20px; margin-bottom: 5px;">Video: 09</div>
+                    <button class="play-button" data-video-id="video-speed+contrast/10_seed666.mp4" 
+                            style="font-size: 32px; cursor: pointer; width: 150px; 
+                                   background-color: #444; color: #fff; 
+                                   border: none; border-radius: 8px;">
+                        ▶
+                    </button>
+                </td>
+                <td>
+                    <video id="video-speed+contrast/10_seed666.mp4" height="300" src="speed+contrast/10_seed666.mp4" controls muted loop></video>
+                </td>
+            </tr>
+            
+        </tbody>
+      </table>
+    </div>
+    
+    
+        
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+          const buttons = document.querySelectorAll('.play-button');
+          buttons.forEach(button => {
+              button.addEventListener('click', function(){
+                  const videoId = this.getAttribute('data-video-id');
+                  const video = document.getElementById(videoId);
+                  if(video.paused){
+                      document.querySelectorAll('video').forEach(v => {
+                         if(!v.paused && v !== video){
+                            v.pause();
+                            const btn = document.querySelector(`button[data-video-id="${v.id}"]`);
+                            if(btn) btn.innerHTML = "▶";
+                         }
+                      });
+                      video.play();
+                      this.innerHTML = "⏸";
+                  } else {
+                      video.pause();
+                      this.innerHTML = "▶";
+                  }
+              });
+          });
+
+          const switchButtons = document.querySelectorAll('.switch-button');
+          switchButtons.forEach(btn => {
+              btn.addEventListener('click', function(e){
+                  switchButtons.forEach(b => b.classList.remove('active'));
+                  e.target.classList.add('active');
+                  const targetId = e.target.getAttribute('data-target');
+                  document.querySelectorAll('.table-container').forEach(tc => {
+                      tc.classList.remove('active');
+                  });
+                  const targetTable = document.getElementById(targetId);
+                  if(targetTable){
+                      targetTable.classList.add('active');
+                  }
+                  document.querySelectorAll('video').forEach(v => {
+                      if(!v.paused){
+                          v.pause();
+                          const btn = document.querySelector(`button[data-video-id="${v.id}"]`);
+                          if(btn) btn.innerHTML = "▶";
+                      }
+                  });
+              });
+          });
+      });
+    </script>
+    
+      </body>
+    </html>
+    
